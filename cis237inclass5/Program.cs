@@ -10,6 +10,14 @@ namespace cis237inclass5
     {
         static void Main(string[] args)
         {
+            CarsWCurtisEntities carsEntities = new CarsWCurtisEntities();
+
+            Console.WriteLine("Print the list");
+
+            foreach(Car car in carsEntities.Cars)
+            {
+                Console.WriteLine(car.id + " " + car.make + " " + car.model);
+            }
         }
     }
 }
